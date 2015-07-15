@@ -1,0 +1,50 @@
+AllText:
+  font: Exo 2.0,Sans Black 84
+  width: 815
+  align: left
+  color: '#F3F3F3'
+
+CardTitle:
+  extends: AllText
+  font_size: 96
+  align: center
+  y: 50
+
+FirstTitle:
+  extends: AllText
+  x: 30
+  y: 200
+
+SecondTitle:
+  extends: FirstTitle
+  align: right
+  x: -30
+
+FirstText:
+  extends: AllText
+  x: 100
+  y: 300
+  font_size: 96
+
+SecondText:
+  extends: FirstText
+  align: right
+  x: -100
+
+FirstIcon:
+  extends: AllText
+  x: 65
+  y: 575
+  width: 200
+  height: 200
+
+SecondIcon:
+  extends: FirstIcon
+  x: 550
+
+QuoteText:
+  extends: CardTitle
+  font: Exo 2.0,Sans Italic 16
+  font_size: 16
+  y: 500
+
