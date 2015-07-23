@@ -2,5 +2,5 @@ Name,Background,Foreground,Icon
 Aim,#FFD700,#230602,bowman
 Force,#7F0000,#F3F3F3,fist
 Evade,#00007F,#F3F3F3,dodging
-Defend,#422518,#F3F3F3,checked-shield
+Defend,#848484,#230602,checked-shield
 ,#000000,#F3F3F3,hazard-sign
