@@ -27,13 +27,15 @@ Squib::Deck.new(cards: 56, layout: 'layout.yml') do
   deck = csv file: 'cards.csv'
   attrl = deck['AttrL']
   attrr = deck['AttrR']
+  colorl = attrl.collect { |x| fg(x) }
+  colorr = attrr.collect { |x| fg(x) }
   background color: attrl.map.with_index { |x,i| bg_grad(x, attrr[i]) }
-  text str: deck['Title'], layout: :CardTitle, color: attrl.collect {|x| fg(x)}
-  text str: attrl, layout: :FirstTitle, color: attrl.collect {|x| fg(x)}
-  text str: deck['ValueL'], layout: :FirstText, color: attrl.collect {|x| fg(x)}
-  text str: attrr, layout: :SecondTitle, color: attrr.collect {|x| fg(x)}
-  text str: deck['ValueR'], layout: :SecondText, color: attrr.collect {|x| fg(x)}
-  text str: deck['Quote'], layout: :QuoteText, color: attrl.collect {|x| fg(x)}
+  text str: deck['Title'], layout: :CardTitle, color: colorl
+  text str: attrl, layout: :FirstTitle, color: colorl
+  text str: deck['ValueL'], layout: :FirstText, color: colorl
+  text str: attrr, layout: :SecondTitle, color: colorr
+  text str: deck['ValueR'], layout: :SecondText, color: colorr
+  text str: deck['Quote'], layout: :QuoteText, color: colorr, hint: :red
   svg file: attrl.collect {|x| icon(x)}, layout: :FirstIcon
   svg file: attrr.collect {|x| icon(x)}, layout: :SecondIcon
   save_png prefix: 'cbat_'
