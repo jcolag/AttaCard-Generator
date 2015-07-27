@@ -2,7 +2,7 @@
 filea=$(mktemp)
 fileb=$(mktemp)
 copya=$(mktemp)
-for i in Aim Force Evade Defend
+for i in $(cut -f1 -d',' dynamic.csv | grep . | tail --lines=+2)
 do
   seq --format=",$i,%g,," 1 14 | tee -a "$filea" >> "$fileb"
 done
