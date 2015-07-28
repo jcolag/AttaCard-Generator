@@ -9,6 +9,14 @@ My final idea became a deck of cards that could be used for both a kind of war/c
 
 And, because a project should be automated, it should be at least _possible_ to generate most of the deck programmatically.
 
+# The Cards
+
+The eventual goal is to have a tarot-like deck, with a total of seventy-eight (78) cards, with four suits of numbered cards and twenty-two (22) named "arcana" cards, albeit with a twist or two along the way.
+
+__Note__:  At this time, the suited cards are generated randomly through the `gencards.sh` script, at least numerically.  Because these are the only cards finalized, `deck.rb` only lays those out.  Watch this space!  (Or don't.)
+
+The card information is stored in `cards.csv`, though only a limited amount of information gets generated.
+
 # Credits
 [Squib](https://andymeneely.github.io/squib/) was created by [Andy Meneely](https://github.com/andymeneely) and made available under the [MIT License](https://github.com/andymeneely/squib/blob/master/LICENSE.txt).
 
