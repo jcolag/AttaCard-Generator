@@ -17,6 +17,20 @@ __Note__:  At this time, the suited cards are generated randomly through the `ge
 
 The card information is stored in `cards.csv`, though only a limited amount of information gets generated.
 
+## Pseudo-Suits
+
+There are four "suits" in the deck, but each card carries _two_ suits with independent values.  In the intended games, those suits are intended to abstractly (and almost certainly inaccurately) represent parts of a single attack in combat.
+
+ - _Aim_ refers to the ability of a player's hand to land an attack on an opponent.
+
+ - _Force_ refers to the strength of that attack.
+
+ - _Evade_ is the opposite of _Aim_, the ability to avoid an attack.
+
+ - _Defend_ is the opposite of _Force_, the ability to resist an attack.
+
+Information for the suits, like the names and "visual identity," are stored in `dynamic.csv`.
+
 # Credits
 [Squib](https://andymeneely.github.io/squib/) was created by [Andy Meneely](https://github.com/andymeneely) and made available under the [MIT License](https://github.com/andymeneely/squib/blob/master/LICENSE.txt).
 
