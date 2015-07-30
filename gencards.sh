@@ -10,6 +10,10 @@ cp "$filea" "$copya"
 while IFS= read -r line
 do
   IFS=, read n attr val n n <<< "$line"
+  if [ ".$n." == ".." ]
+  then
+    n=
+  fi
   attr=$(echo "$line" | cut -f2 -d',')
   val=$(echo "$line" | cut -f3 -d',')
   insert=$(grep . "$fileb" | grep -vw "$attr" | sort -R | head -1)
