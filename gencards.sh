@@ -4,6 +4,14 @@ fileb=$(mktemp)
 copya=$(mktemp)
 outfile=outcards.csv
 max=14
+if [ ".$1." != ".." ]
+then
+  outfile=$1
+fi
+if [ ".$2." != ".." ]
+then
+  max=$2
+fi
 for i in $(cut -f1 -d',' dynamic.csv | grep . | tail --lines=+2)
 do
   seq --format=",$i,%g,," 1 "$max" | tee -a "$filea" >> "$fileb"
