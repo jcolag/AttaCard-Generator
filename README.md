@@ -31,6 +31,14 @@ There are four "suits" in the deck, but each card carries _two_ suits with indep
 
 Information for the suits, like the names and "visual identity," are stored in `dynamic.csv`.
 
+## Arcana
+
+TBD
+
+## Generating Cards
+
+As mentioned, the `gencards.sh` bash script generates a random deck of pseudo-suited cards.  It reads the suit names from `dynamic.csv` and uses some interesting-but-not-quite-sufficiently clever filters to pair off random values of different suits.
+
 # Credits
 [Squib](https://andymeneely.github.io/squib/) was created by [Andy Meneely](https://github.com/andymeneely) and made available under the [MIT License](https://github.com/andymeneely/squib/blob/master/LICENSE.txt).
 
