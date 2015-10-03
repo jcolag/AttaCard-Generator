@@ -35,7 +35,7 @@ Squib::Deck.new(cards: 56, layout: 'layout.yml') do
   text str: deck['ValueL'], layout: :FirstText, color: colorl
   text str: attrr, layout: :SecondTitle, color: colorr
   text str: deck['ValueR'], layout: :SecondText, color: colorr
-  text str: deck['Quote'], layout: :QuoteText, color: colorr, hint: :red
+  text str: deck['Quote'], layout: :QuoteText, color: colorr #, hint: :red
   svg file: attrl.collect {|x| icon(x)}, layout: :FirstIcon
   svg file: attrr.collect {|x| icon(x)}, layout: :SecondIcon
   save_png prefix: 'cbat_'
